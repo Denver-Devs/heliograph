@@ -1,0 +1,36 @@
+{
+  "name": "heliograph",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "docs": "downdoc 'src/js/**/*.js' docs",
+    "js": "webpack --progress --colors",
+    "js:watch": "webpack --progress --colors --watch",
+    "serve": "webpack-dev-server --progress --colors",
+    "lint": "eslint src/js/",
+    "test": "npm run lint && tape test/index.js",
+    "deploy": "npm run test && surge www heliograph.surge.sh"
+  },
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^1.11.0",
+    "downdoc": "^3.0.0",
+    "webpack-dev-server": "^1.10.1",
+    "eslint": "^1.1.0",
+    "eslint-plugin-standard": "^1.2.0",
+    "eslint-plugin-react": "^3.2.2 ",
+    "eslint-config-standard": "^4.1.0 ",
+    "eslint-config-standard-react": "^1.0.4 ",
+    "babel-loader": "^5.3.2",
+    "babel": "^5.8.21",
+    "tape": "^4.0.3",
+    "surge": "^0.7.4"
+  },
+  "standard": {
+    "ignore": [
+      "node_modules/**"
+    ]
+  }
+}
